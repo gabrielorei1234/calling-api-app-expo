@@ -15,39 +15,42 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
+      {/* Boas-vindas */}
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+        <ThemedText type="title">Bem-vindo(a) ao Gerador de Usuários!</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
+          Este aplicativo foi projetado para mostrar como você pode criar algo incrível usando
+          React Native! Na aba ao lado, você encontrará um gerador de usuários aleatórios que utiliza
+          a API do RandomUser. Explore e divirta-se! 🚀
+        </ThemedText>
+      </ThemedView>
+
+      {/* Instruções para navegar */}
+      <ThemedView style={styles.stepContainer}>
+        <ThemedText type="subtitle">O que você pode fazer aqui:</ThemedText>
+        <ThemedText>
+          1. Aprender mais sobre desenvolvimento React Native. 🌟{'\n'}
+          2. Descobrir como consumir APIs para criar funcionalidades dinâmicas. 🔄{'\n'}
+          3. Na próxima aba, veja usuários gerados aleatoriamente e explore suas informações.
+        </ThemedText>
+      </ThemedView>
+
+      {/* Dicas adicionais */}
+      <ThemedView style={styles.stepContainer}>
+        <ThemedText type="subtitle">Dicas para sua jornada</ThemedText>
+        <ThemedText>
+          Pressione{' '}
           <ThemedText type="defaultSemiBold">
             {Platform.select({
               ios: 'cmd + d',
               android: 'cmd + m',
-              web: 'F12'
+              web: 'F12',
             })}
           </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
+          para abrir as ferramentas de desenvolvedor e testar as funcionalidades. Boa exploração! 🎉
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
@@ -59,10 +62,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
+    marginBottom: 16,
   },
   stepContainer: {
     gap: 8,
-    marginBottom: 8,
+    marginBottom: 16,
   },
   reactLogo: {
     height: 178,
